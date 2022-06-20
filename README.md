@@ -45,10 +45,10 @@ export const UserSchema = BaseSchema.extend({
 
 [build-img]: https://github.com/davewasmer/draught-db/actions/workflows/release.yml/badge.svg
 [build-url]: https://github.com/davewasmer/draught-db/actions/workflows/release.yml
-[downloads-img]: https://img.shields.io/npm/dt/typescript-npm-package-template
-[downloads-url]: https://www.npmtrends.com/typescript-npm-package-template
-[npm-img]: https://img.shields.io/npm/v/typescript-npm-package-template
-[npm-url]: https://www.npmjs.com/package/typescript-npm-package-template
+[downloads-img]: https://img.shields.io/npm/dt/@draught/db
+[downloads-url]: https://www.npmtrends.com/@draught/db
+[npm-img]: https://img.shields.io/npm/v/@draught/db
+[npm-url]: https://www.npmjs.com/package/@draught/db
 [issues-img]: https://img.shields.io/github/issues/davewasmer/draught-db
 [issues-url]: https://github.com/davewasmer/draught-db/issues
 [codecov-img]: https://codecov.io/gh/davewasmer/draught-db/branch/main/graph/badge.svg
