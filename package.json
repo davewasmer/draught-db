@@ -1,7 +1,7 @@
 {
   "name": "@draught/db",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Type-enriched MongoDB connection for Next.js apps",
   "main": "./lib/src/index.js",
   "files": [
     "lib/**/*"
