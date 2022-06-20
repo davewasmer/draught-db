@@ -21,11 +21,16 @@ npm install @draught-db
 Create a database client:
 
 ```ts
+// lib/schema.ts
+export type Schema = {
+  users: { _id: Id; email: string };
+};
+
 // lib/db.ts
 import initializeDatabase, { DbConfig } from '@draught/db';
-import Schema from './schema';
+import { Schema } from './schema';
 
-export default initializeDatabase({
+export default initializeDatabase<Schema>({
   appName: 'my-app',
   databaseName: 'my_app_development',
 });
