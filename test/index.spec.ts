@@ -1,13 +1,26 @@
-import { myPackage } from '../src';
+import initializeDatabase, { Id } from '../src';
 
 describe('index', () => {
-  describe('myPackage', () => {
-    it('should return a string containing the message', () => {
-      const message = 'Hello';
+  describe('initializeDatabase', () => {
+    it('connects to mongo', async () => {
+      let db = initializeDatabase<{ posts: { _id: Id; title: string } }>({
+        appName: 'draught-db-test',
+        databaseName: 'draught_db_test',
+      });
 
-      const result = myPackage(message);
+      let random = Math.random().toString();
+      let id = `post_${random}` as Id;
+      let title = `test ${random}`;
 
-      expect(result).toMatch(message);
+      await db.posts.insertOne({ _id: id, title });
+
+      let lookup = await db.posts.findOne({ _id: `post_${random}` as Id });
+
+      expect(lookup).toBeTruthy();
+      expect(lookup!.title).toMatch(title);
+
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+      await (global as any).db.client.close();
     });
   });
 });
