@@ -1,4 +1,5 @@
-import initializeDatabase, { Id } from '../src';
+import initializeDatabase from '../src';
+import type { Id } from '@draught/utils';
 
 describe('index', () => {
   describe('initializeDatabase', () => {
