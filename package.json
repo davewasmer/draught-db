@@ -126,6 +126,7 @@
     ]
   },
   "dependencies": {
+    "@draught/utils": "^1.0.0",
     "debug": "^4.3.4",
     "mongodb": "^4.7.0",
     "zod": "^3.17.3"

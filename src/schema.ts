@@ -1,10 +1,5 @@
+import { Id } from '@draught/utils';
 import * as z from 'zod';
-
-class Brand<T extends string> {
-  private as!: T;
-}
-
-export type Id = string & Brand<'Id'>;
 
 export const IdSchema: (prefix?: string) => z.Schema<Id> = prefix =>
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
